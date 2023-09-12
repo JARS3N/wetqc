@@ -12,7 +12,7 @@ Imports:
         DT,
         dplyr
 Remotes: 
-  Github::Jars3n/foam
+  Github::Jars3n/foam,
   Github::Jars3n/pp
 License: closed
 Encoding: UTF-8
