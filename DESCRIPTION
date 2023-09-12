@@ -1,0 +1,19 @@
+Package: wetqc
+Type: Package
+Title: wetqc
+Version: 0.1.0
+Author: JARS3N
+Maintainer: JARS3N <JARS3N@GMAIL.COM>
+Description: wetqc
+Imports:
+        shiny,
+        shinyjs,
+        RMySQL,
+        DT,
+        dplyr
+Remotes: 
+  Github::Jars3n/foam
+  Github::Jars3n/pp
+License: closed
+Encoding: UTF-8
+LazyData: true
