@@ -92,7 +92,7 @@ function(input, output, session) {
         }
       )) +
       ylab(input$var) +
-      ggtitle(wetqc::generate_ggtitle(input$var))
+      ggtitle(generate_ggtitle(input$var))
 
 
 
