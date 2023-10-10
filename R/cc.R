@@ -1,1 +1,1 @@
-shiny::shinyApp(wetqc::cc_ui(),wetqc::cc_server())
+shiny::shinyApp(cc_ui(),cc_server())
