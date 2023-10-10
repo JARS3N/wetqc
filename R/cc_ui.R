@@ -1,4 +1,4 @@
-ui2<-function(){
+cc_ui<-function(){
 library(shiny)
 
 fluidPage(titlePanel("Cartridge QC Control Charts"),
