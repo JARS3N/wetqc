@@ -1,3 +1,4 @@
+cc_server<-function(){
 db <- adminKraken::con_dplyr()
 types <- tbl(db, "wetqc_lot") %>%
   select(cartridgetypeid, Inst) %>%
@@ -105,4 +106,5 @@ function(input, output, session) {
     }, options = list(dom = 't'))
 
   })
+}
 }
