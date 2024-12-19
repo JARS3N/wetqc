@@ -29,6 +29,11 @@ shinyServer(function(input, output, session) {
         print(procd[[1]])
           # process foam objects into dataframe for kraken
           DATA <- purrr::map(procd,wetqc::format_kraken)
+        DATA <- lapply(DATA, function(u) {
+          x <- names(u)
+          names(u) <- gsub("pH_target", "Target", x)
+          u
+        })
         head(DATA[[1]])
           output$foo2 <- DT::renderDataTable(dplyr::bind_rows(DATA))
           sum_tbl <- purrr::map_df(procd, sum_table_row) %>%
