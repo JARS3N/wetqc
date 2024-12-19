@@ -23,11 +23,13 @@ shinyServer(function(input, output, session) {
           output$MSG <- renderText("Munging Data...")
           # point to files uploaded to temp directory
           fls <- input$goButton$datapath
+         print(fls)
           # process them into foam objects
           procd <- purrr::map(fls, foam::new)
+        print(procd[[1]])
           # process foam objects into dataframe for kraken
           DATA <- purrr::map(procd,wetqc::format_kraken)
-
+        head(DATA[[1]])
           output$foo2 <- DT::renderDataTable(dplyr::bind_rows(DATA))
           sum_tbl <- purrr::map_df(procd, sum_table_row) %>%
             arrange(sn)
