@@ -1,6 +1,7 @@
 upload <- function(u) {
   require(RMySQL)
-  type <- substr(unique(u$Lout), 1, 1)
+  u<-as.data.frame(u)
+  type <- substr(unique(u$Lot), 1, 1)
   my_db <- adminKraken::con_mysql()
   dbWriteTable(
     my_db,
