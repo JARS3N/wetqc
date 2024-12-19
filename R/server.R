@@ -83,8 +83,10 @@ shinyServer(function(input, output, session) {
               write.csv(OUT, file, row.names = F)
             })
           observeEvent(input$upload, {
+              print("before upload")
             wetqc::upload_all(remove_deselected(DATA,
                                                 input$foo_rows_selected))
+              print("post upload")
           })
         }
       })
