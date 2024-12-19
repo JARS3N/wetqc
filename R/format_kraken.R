@@ -7,6 +7,6 @@ format_kraken <- function(u) {
     Inst = u$Inst
   ) %>%
     select(-contains("delta"))
-  setNames(out, gsub("pH_target", "Target", names(out)))
+  setNames(out, gsub("pH_t", "T", names(out)))
   out
 }
