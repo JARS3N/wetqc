@@ -92,6 +92,8 @@ shinyServer(function(input, output, session) {
             wetqc::upload_all(remove_deselected(DATA,
                                                 input$foo_rows_selected))
               print("post upload")
+               output$foo <- clean_selections()
+              DATA<-NULL
           })
         }
       })
